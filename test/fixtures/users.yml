@@ -1,0 +1,4 @@
+thuc:
+  name: Phan Trong Thuc
+  email: ptthuc77@gmail.com
+  password_digest: <%= User.digest "123456" %>

@@ -1,0 +1,204 @@
+vi:
+  notice_sp: không được hỗ trợ!
+  page_base: ứng dụng mẫu
+  layouts:
+    header:
+      home: Trang chủ
+      about: Giới thiệu
+      contact: Liên hệ
+      help: Trợ giúp
+      sign_in: Đăng nhập
+      sign_up: Đăng ký
+      profile: Hồ sơ
+      settings: Cài đặt
+      signout: Đăng xuất
+      user: Người dùng
+    footer:
+      title: Hướng dẫn về Ruby On Rails của Michael Hartl
+      copy: Bản quyền 2019
+  static_pages:
+    home:
+      page_name: Trang chủ
+      title: Ứng dụng mẫu
+      content: Đây là trang chủ cho ứng dụng mẫu
+      link_name: hướng dẫn về Ruby on Rails
+      recently: Bài viết gần đây
+      create: Viết bài
+    about:
+      page_name: Giới thiệu
+      title: Giới thiệu
+      content: cuốn sách hướng dẫn về Ruby on Rails
+      link_name: Giới thiệu
+    contact:
+      page_name: Liên hệ
+      title: Liên hệ
+      content: Liên hệ về hướng dẫn Ruby on Rails với ứng dụng mẫu tại
+      link_name: trang liên hệ
+    help:
+      page_name: Trợ giúp
+      title: Trợ giúp
+      content: Nhận trợ giúp hướng dẫn về Ruby on Rails tại
+      link_name: trang trợ giúp
+  users:
+    new:
+      page_name: Đăng ký
+      sign_up: Đăng ký
+      submit: Tạo tài khoản
+    create:
+      success: Đăng ký thành công
+      check_email: Hãy kiểm tra email của bạn để kích hoạt tài khoản
+    show:
+      not_found: Không tìm thấy người dùng
+      check_login: Bạn phải đăng nhập trước
+      posts: Bài viết
+      no_post: Không có bài viết
+    edit:
+      page_name: Chỉnh sửa
+      edit_user: Chỉnh sửa thông tin
+      create: Lưu thay đổi
+      check_login: Bạn phải đăng nhập trước
+      check_edit: Bạn muốn chỉnh sửa hồ sơ phải không?
+    update:
+      success: Update successfully
+      fails: Lỗi cập nhật
+    index:
+      page_name: Danh sách
+      all_user: Danh sách người dùng
+      detail: Hồ sơ
+      delete: Xóa
+      confirm: Bạn chắc chắn không?
+      check_login: You must login first
+    destroy:
+      delete: Đã xóa
+      notdelete: Không thể xóa
+    follow:
+      follow: Theo dõi
+    unfollow:
+      unfollow: Bỏ theo dõi
+  sessions:
+    new:
+      page_name: Đăng nhập
+      sign_in: Đăng nhập
+      login: Đăng nhập
+      email: Email
+      password: Mật khẩu
+      remember: Lưu tài khoản
+      reset: Quên mật khẩu?
+    create:
+      success: Đăng nhập thành công
+      danger: Tài khoản hoặc mật khẩu không chính xác
+      check_email: Hãy kiểm tra email của bạn để kích hoạt tài khoản
+    destroy:
+      logout: Đã đăng xuất
+  activerecord:
+    attributes:
+      user:
+        name: Tên
+        email: Email
+        password: Mật khẩu
+        password_confirmation: Xác nhận mật khẩu
+      micropost:
+        content: Nội dung
+    errors:
+      messages:
+        blank: không được để trống
+        invalid: không hợp lệ
+        confirmation: không trùng khớp
+        too_long: quá dài
+        too_short: quá ngắn
+        taken: đã tồn tại
+  user_mailer:
+    account_activation:
+      subject: Kích hoạt tài khoản
+      title: Ứng dụng mẫu
+      hello: Xin chào
+      content: Nhấp vào liên kết dưới đây để kích hoạt tài khoản của bạn
+      active: Kích hoạt
+    password_reset:
+      subject: Đổi mật khẩu
+      title: Đổi mật khẩu
+      content: Để thiết lập lại mật khẩu của bạn, nhấp vào liên kết dưới đây
+      reset: Đổi mật khẩu ngay
+      remind_1: Liên kết này sẽ hết hạn sau hai giờ nữa
+      remind_2: Nếu bạn không yêu cầu đặt lại mật khẩu,
+        vui lòng bỏ qua email này và mật khẩu của bạn sẽ được giữ nguyên.
+  account_activations:
+    edit:
+      success: Đã kích hoạt tài khoản
+      invalid: Liên kết không hợp lệ
+      fail: Tài khoản không tồn tại hoặc đã được kích hoạt
+  password_resets:
+    new:
+      page_name: Quên mật khẩu
+      title: Quên mật khẩu
+      email: Email
+      submit: Gửi yêu cầu
+    create:
+      sent: Vui lòng kiểm tra email của bạn để đặt lại mật khẩu
+      invalid: Không tìm thấy địa chỉ email này
+    edit:
+      page_name: Đổi mật khẩu
+      title: Đổi mật khẩu
+      password: Mật khẩu
+      confirm: Xác nhận mật khẩu
+      submit: Lưu thay đổi
+      not_found: Tài khoản không tồn tại
+      time_out: Yêu cầu của bạn đã hết thời gian
+      invalid: Liên kết không hợp lệ
+    update:
+      blank: can't be blank
+      success: Đổi mật khẩu thành công
+      invalid: Liên kết không hợp lệ
+  microposts:
+    create:
+      success: Đăng bài thành công
+    micropost:
+      edit: Sửa
+      delete: Xóa
+      confirm: Bạn chắc chắn không?
+    form:
+      think: ", bạn đang nghĩ gì?"
+      submit: Lưu lại
+      choose: Chọn tệp
+    destroy:
+      success: Đã xóa
+      can't_delete: Không thể xóa
+    edit:
+      page_name: Sửa bài viết
+      title: Chỉnh sửa bài viết
+    update:
+      success: Cập nhật thành công
+      fail: Cập nhật thất bại
+  datetime:
+    distance_in_words:
+      less_than_x_minutes: Vừa xong
+      x_minutes:
+        one: 1 phút
+        other: "%{count} phút"
+      about_x_hours:
+        one: 1 giờ
+        other: "%{count} giờ"
+      about_x_days:
+        one: 1 ngày
+        other: "%{count} ngày"
+      about_x_months:
+        one: 1 tháng
+        other: "%{count} tháng"
+      about_x_years:
+        one: 1 năm
+        other: "%{count} năm"
+  share:
+    stats:
+      following: Đang theo dõi
+      followers: Người theo dõi
+  relationships:
+    create:
+      not_found: User not found
+    destroy:
+      not_found: Relationship not found
+  followings:
+    index:
+      following: Đang theo dõi
+  followers:
+    index:
+      followers: Người theo dõi

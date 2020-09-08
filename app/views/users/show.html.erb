@@ -1,0 +1,25 @@
+<%= provide :title, @user.name %>
+<div class="row">
+  <div class="col-md-4">
+    <div class="info-user text-center">
+      <%= gravatar_for @user %>
+      <h3><strong><%= @user.name %></strong></h3>
+    </div>
+    <%= render "share/stats" %>
+    <br>
+    <%= render "share/form_relationship" %>
+    <br>
+  </div>
+  <div class="col-md-8">
+    <div class="post">
+      <% if @posts.any? %>
+        <h3><%= t ".posts" %> (<%= @posts.size %>)</h3>
+        <p><%= render @posts %></p>
+        <%= will_paginate @posts,
+          list_classes: %w(pagination justify-content-center) %>
+      <% else %>
+        <h3 class="text-center"><%= t ".no_post" %></h3>
+      <% end %>
+    </div>
+  </div>
+</div>

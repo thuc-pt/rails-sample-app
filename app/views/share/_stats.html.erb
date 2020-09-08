@@ -1,0 +1,11 @@
+<% @user ||= current_user %>
+<%= link_to user_followings_path(@user),
+  class: "btn btn-outline-success btn-block" do %>
+  <strong><%= @user.following.size %></strong>
+  <div><%= t ".following" %></div>
+<% end %>
+<%= link_to user_followers_path(@user),
+  class: "btn btn-outline-success btn-block" do %>
+  <strong><%= @user.followers.count %></strong>
+  <div><%= t ".followers" %></div>
+<% end %>

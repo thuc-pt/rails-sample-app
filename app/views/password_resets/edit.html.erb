@@ -1,0 +1,19 @@
+<%= provide :title, t(".page_name") %>
+<div class="jumbotron login">
+  <h1 class="text-center"><%= t ".title" %></h1>
+  <%= form_for(@user, url: password_reset_path(params[:id])) do |f| %>
+    <p class="text-danger"><%= @user.errors.full_messages.first %></p>
+    <%= hidden_field_tag :email, @user.email %>
+    <div class="form-group">
+      <%= f.label t ".password" %>
+      <%= f.password_field :password, class: "form-control" %>
+    </div>
+    <div class="form-group">
+      <%= f.label t ".confirm" %>
+      <%= f.password_field :password_confirmation, class: "form-control" %>
+    </div>
+    <div class="text-center">
+      <%= f.submit t(".submit"), class: "btn btn-primary" %>
+    </div>
+  <% end %>
+</div>

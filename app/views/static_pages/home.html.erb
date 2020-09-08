@@ -1,0 +1,27 @@
+<% provide :title, t(".page_name") %>
+<% if current_user.present? %>
+  <div class="row">
+    <div class="col-md-4">
+      <br>
+      <h1 class="text-center"><%= t ".create" %></h1>
+      <%= render "microposts/form" %>
+      <br>
+      <%= render "share/stats" %>
+      <br>
+    </div>
+    <div class="col-md-8">
+      <br>
+      <h1 class="text-center"><%= t ".recently" %></h1>
+      <%= render "microposts/index" %>
+      <%= will_paginate @posts %>
+    </div>
+  </div>
+<% else %>
+  <div class="jumbotron page-person">
+    <h1 class="text-center"><%= t(".title") %></h1>
+    <p class="text-center">
+      <%= t(".content") %>
+      <%= link_to t(".link_name"), Settings.link_home %>
+    </p>
+  </div>
+<% end %>

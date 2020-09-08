@@ -1,0 +1,22 @@
+<div class="card">
+  <div class="info">
+    <div><%= link_to gravatar_for(micropost.user), micropost.user %></div>
+    <div class="compo-name">
+      <div>
+        <%= link_to micropost.name, micropost.user, class: "link_name" %>
+      </div>
+      <div><%= time_ago_in_words micropost.created_at %></div>
+    </div>
+    <% if current_user == micropost.user %>
+      <%= link_to t(".edit"), edit_micropost_path(micropost), class: "btn btn-info" %>
+      &nbsp;&nbsp;&nbsp;
+      <%= link_to t(".delete"), micropost, method: :delete,
+        data: {confirm: t(".confirm")}, class: "btn btn-danger" %>
+    <% end %>
+  </div>
+  <div><%= micropost.content %></div>
+  <% if micropost.picture? %>
+    <br>
+    <div><%= image_tag micropost.picture.url, class: "img-fluid"  %></div>
+  <% end %>
+</div>

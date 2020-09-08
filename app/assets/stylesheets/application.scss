@@ -1,0 +1,134 @@
+@import 'bootstrap';
+@import 'color';
+
+/* BODY SITE */
+body {
+  font-family: 'Time new roman';
+}
+
+/* HEADER */
+.navbar-collapse {
+  justify-content: flex-end;
+}
+#head {
+  .nav {
+    align-items: center;
+    .img:hover { background: none !important; }
+  }
+  .nav-link {
+    color: $c-white;
+    text-transform: uppercase;
+    font-weight: bold;
+    transition: 0.3s;
+  }
+  .nav-link:hover {
+    color: $c-red;
+    background: $c-white;
+  }
+  .dropdown {
+    .dropdown-menu {
+      margin-top: 8px;
+      border-radius: 0;
+    }
+    .avatar {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+    }
+  }
+}
+
+/* STATIC-PAGES */
+.page-person {
+  margin-top: 2rem;
+  h1 { font-weight: bold; }
+}
+
+/* FOOTER */
+#footer {
+  .jumbotron {
+    background: none;
+    border-top: 2px solid $c-border;
+    border-radius: 0;
+  }
+  h5 { font-weight: bold; }
+}
+
+/* USERS */
+.alert { font-weight: bold; }
+.form-control { box-shadow: none !important; }
+label { font-weight: bold; }
+.field_with_errors { .form-control { border-color: $c-red; } }
+
+/* SHOW */
+.info-user {
+  padding: 3rem;
+  .avatar {
+    border-radius: 50%;
+    margin-bottom: 10px;
+  }
+}
+
+.post {
+  padding-top: 2rem;
+  .info {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+    .avatar {
+      width: 50px;
+      height: auto;
+      margin-right: 1rem;
+      border-radius: 50%;
+    }
+    .link_name {
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .compo-name { flex-grow: 1; }
+  }
+}
+
+/* FORM */
+.new-user, .login {
+  width: 70%;
+  margin: 2rem auto;
+  .component {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 25px;
+  }
+}
+
+/* LIST USER */
+.card {
+  margin-bottom: 25px;
+  padding: 20px;
+  .user-item {
+    margin-bottom: 15px;
+    .avatar {
+      border-radius: 50%;
+      margin-bottom: 10px;
+    }
+  }
+  .action {
+    display: flex;
+    justify-content: space-around;
+  }
+}
+
+.component-post {
+  .avatar {
+    border-radius: 50%;
+    margin-bottom: 1rem;
+  }
+}
+.link-user-follow {
+  text-decoration: none !important;
+  .avatar {
+    width: 40px;
+    height: auto;
+    border-radius: 50%;
+    margin-right: 1rem;
+  }
+}

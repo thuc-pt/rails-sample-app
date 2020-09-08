@@ -1,0 +1,170 @@
+en:
+  notice_sp: is not support!
+  page_base: sample app
+  layouts:
+    header:
+      home: Home
+      about: About
+      contact: Contact
+      help: Help
+      sign_in: Sign in
+      sign_up: Sign up
+      profile: Profile
+      settings: Settings
+      signout: Sign out
+      user: User
+    footer:
+      title: The Ruby On Rails Tutorial By Michael Hartl
+      copy: Copyright 2019
+  static_pages:
+    home:
+      page_name: Home
+      title: Sample Application
+      content: This is the home page for the sample application
+      link_name: Ruby on Rails tutorial
+      recently: Microposts recently
+      create: Create post
+    about:
+      page_name: About
+      title: About
+      content: the book Ruby on Rails Tutorial
+      link_name: Introduce
+    contact:
+      page_name: Contact
+      title: Contact
+      content: Contact the Ruby on Rails Tutorial about the sample app at the
+      link_name: contact page
+    help:
+      page_name: Help
+      title: Help
+      content: Get help on the Ruby on Rails Tutorial at the
+      link_name: help page
+  users:
+    new:
+      page_name: Sign up
+      sign_up: Sign up
+      submit: Create account
+    create:
+      success: Sign up successfully
+      check_email: Please check your email to activate account
+    show:
+      not_found: User is not found
+      check_login: You must login first
+      posts: Microposts
+      no_post: No post
+    edit:
+      page_name: Edit
+      edit_user: Edit profile
+      create: Save change
+      check_login: You must login first
+      check_edit: Do you want to edit the profile?
+      not_found: User is not found
+    update:
+      success: Update successfully
+      fails: Update fails
+    index:
+      page_name: List
+      all_user: List user
+      detail: Profile
+      delete: Delete
+      confirm: Are you sure?
+      check_login: You must login first
+    destroy:
+      delete: Deleted
+      notdelete: Can't delete
+    follow:
+      follow: Follow
+    unfollow:
+      unfollow: Unfollow
+  sessions:
+    new:
+      page_name: Sign in
+      sign_in: Sign in
+      login: "Sign in"
+      email: Email
+      password: Password
+      remember: Remember me
+      reset: Forgot password?
+    create:
+      success: Sign in successfully
+      danger: Invalid email or password
+      check_email: Please check your email to activate account
+    destroy:
+      logout: Signed out
+  user_mailer:
+    account_activation:
+      subject: Account activation
+      title: Sample app
+      hello: Hello
+      content: Click on the link below to activate your account
+      active: Activation
+    password_reset:
+      subject: Password reset
+      title: Password reset
+      content: To reset your password click the link below
+      reset: Reset password now
+      remind_1: This link will expire in two hours
+      remind_2: If you did not request your password to be reset,
+        please ignore this email and your password will stay as it is.
+  account_activations:
+    edit:
+      success: Account activated
+      invalid: Invalid link
+      fail: The account does not exist or has been activated
+  password_resets:
+    new:
+      page_name: Password reset
+      title: Password reset
+      email: Email
+      submit: Send request
+    create:
+      sent: Please check your email to reset password
+      invalid: Email address not found
+    edit:
+      page_name: Reset password
+      title: Reset password
+      password: Password
+      confirm: Password confirmation
+      submit: Save change
+      not_found: The account doesn't exist
+      time_out: Your request timed out
+      invalid: Invalid link
+    update:
+      blank: can't be blank
+      success: Reset password successfully
+      invalid: Invalid link
+  microposts:
+    create:
+      success: Create post successfully
+    micropost:
+      edit: Edit
+      delete: Delete
+      confirm: Are you sure?
+    form:
+      think: ", what are you thinking?"
+      submit: Save as
+      choose: Choose file
+    destroy:
+      success: Deleted
+      can't_delete: Can't delete
+    edit:
+      page_name: Edit post
+      title: Edit post
+    update:
+      success: Update successfully
+      fail: Update fail
+  share:
+    stats:
+      following: Following
+      followers: Followers
+  relationships:
+    create:
+      not_found: User not found
+    destroy:
+      not_found: Relationship not found
+  followings:
+    index:
+      following: Following
+  followers:
+    index:
+      followers: Followers

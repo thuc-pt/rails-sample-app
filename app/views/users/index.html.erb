@@ -1,0 +1,24 @@
+<% provide :title, t(".page_name") %>
+<br>
+<h1 class="text-center"><%= t(".all_user") %></h1>
+<br>
+<div class="row">
+  <% @users.each do |user| %>
+    <div class="col-md-6 col-lg-4">
+      <div class="card">
+        <div class="user-item text-center">
+          <%= gravatar_for user %>
+          <h5><strong><%= user.name %></strong></h5>
+        </div>
+        <div class="action">
+          <%= link_to t(".detail"), user, class: "btn btn-outline-info" %>
+          <% if current_user.admin? && user.admin.blank? %>
+            <%= link_to t(".delete"), user, method: :delete,
+              data: {confirm: t(".confirm")}, class: "btn btn-outline-danger" %>
+          <% end %>
+        </div>
+      </div>
+    </div>
+  <% end %>
+</div>
+<%= will_paginate @users, list_classes: %w(pagination justify-content-center) %>

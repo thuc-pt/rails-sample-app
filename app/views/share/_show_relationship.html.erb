@@ -1,0 +1,29 @@
+<% provide :title, @title %>
+<div class="row">
+  <div class="col-md-4">
+    <div class="info-user text-center">
+      <%= gravatar_for @user %>
+      <h3><strong><%= @user.name %></strong></h3>
+    </div>
+    <%= render "share/stats" %>
+    <br>
+    <%= render "share/form_relationship" %>
+    <br>
+  </div>
+  <div class="col-md-8">
+    <div class="post">
+      <% if @follow_users.any? %>
+        <h1 class="text-center"><%= @title %></h1>
+        <% @follow_users.each do |user| %>
+          <%= link_to user, class: "link-user-follow" do %>
+            <%= gravatar_for user %>
+            <strong><%= user.name %></strong>
+          <% end %>
+          <hr>
+        <% end %>
+        <%= will_paginate @follow_users,
+          list_classes: %w(pagination justify-content-center) %>
+      <% end %>
+    </div>
+  </div>
+</div>

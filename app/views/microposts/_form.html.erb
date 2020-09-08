@@ -1,0 +1,21 @@
+<div class="page-person">
+  <div class="component-post">
+    <div class="text-center">
+      <%= link_to gravatar_for(current_user), current_user %>
+    </div>
+    <%= form_with model: @post, local: true do |f| %>
+      <%= render "share/errors", object: @post %>
+      <%= f.text_area :content, class: "form-control", rows: 5,
+        placeholder: "#{current_user.name << t(".think")}" %>
+      <br>
+      <div class="custom-file">
+        <%= f.file_field :picture, accept: Settings.accept_img, class: "custom-file-input" %>
+        <%= f.label t(".choose"), class: "custom-file-label" %>
+      </div>
+      <br><br>
+      <div>
+        <%= f.submit t(".submit"), class: "btn btn-primary btn-block" %>
+      </div>
+    <% end %>
+  </div>
+</div>

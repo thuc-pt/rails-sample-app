@@ -1,0 +1,52 @@
+<div class="navbar navbar-expand-sm navbar-dark bg-dark">
+  <div class="container">
+    <%= link_to image_tag("logo.png"), root_path, class: "navbar-brand" %>
+    <button class="navbar-toggler" data-toggle="collapse" data-target="#head">
+      <span class="navbar-toggler-icon"></span></button>
+    <div class="collapse navbar-collapse" id="head">
+      <ul class="nav">
+        <li class="nav-items">
+          <%= link_to t(".home"), root_path, class: "nav-link" %>
+        </li>
+        <li class="nav-items">
+          <%= link_to t(".about"), about_path, class: "nav-link" %>
+        </li>
+        <li class="nav-items">
+          <%= link_to t(".contact"), contact_path, class: "nav-link" %>
+        </li>
+        <li class="nav-items">
+          <%= link_to t(".help"), help_path, class: "nav-link" %>
+        </li>
+        <% if current_user.present? %>
+        <li class="nav-items dropdown">
+          <div class="nav-link img" data-toggle="dropdown">
+            <%= gravatar_for current_user %>
+          </div>
+          <div class="dropdown-menu">
+            <%= link_to t(".profile"), user_path(current_user),
+            class: "dropdown-item" %>
+            <%= link_to t(".settings"), edit_user_path(current_user),
+              class: "dropdown-item" %>
+            <%= link_to t(".user"), users_path, class: "dropdown-item" %>
+            <div class="dropdown-divider"></div>
+            <%= link_to t(".signout"), signout_path, class: "dropdown-item" %>
+          </div>
+        </li>
+        <% else %>
+          <li class="nav-items">
+            <%= link_to t(".sign_in"), signin_path, class: "nav-link" %>
+          </li>
+          <li class="nav-items">
+            <%= link_to t(".sign_up"), signup_path, class: "nav-link" %>
+          </li>
+        <% end %>
+        <li class="nav-items"><%= link_to image_tag("vi.png"),
+          Settings.vietnamese.to_h, class: "nav-link img" %>
+        </li>
+        <li class="nav-items"><%= link_to image_tag("en.png"),
+          Settings.english.to_h, class: "nav-link img" %>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>

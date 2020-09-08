@@ -1,0 +1,24 @@
+<% provide :title, t(".page_name") %>
+<div class="jumbotron login">
+  <h1 class="text-center"><%= t(".sign_in") %></h1>
+  <%= form_with(scope: :session, local: true) do |f| %>
+    <div class="form-group">
+      <%= f.label t(".email") %>
+      <%= f.text_field :email, class: "form-control" %>
+    </div>
+    <div class="form-group">
+      <%= f.label t(".password") %>
+      <%= f.password_field :password, class: "form-control" %>
+    </div>
+    <div class="component">
+      <div class="custom-control custom-checkbox mb3">
+        <%= f.check_box :remember, class: "custom-control-input" %>
+        <%= f.label :remember, t(".remember"), class: "custom-control-label" %>
+      </div>
+      <div><%= link_to t(".reset"), reset_password_path %></div>
+    </div>
+    <div class="text-center">
+      <%= f.submit t(".login"), class: "btn btn-primary" %>
+    </div>
+  <% end %>
+</div>

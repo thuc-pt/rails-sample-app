@@ -1,0 +1,28 @@
+english:
+  locale: "en"
+vietnamese:
+  locale: "vi"
+
+# link _blank
+link_home: "https://www.railstutorial.org/"
+link_about: "https://rubyonrails.org"
+link_contact: "https://www.railstutorial.org/contact"
+link_help: "https://www.railstutorial.org/help"
+gravatar_link: "https://secure.gravatar.com/avatar/"
+accept_img: "image/jpeg, image/gif, image/png"
+
+# validates model
+size:
+  name: 30
+  email: 255
+  password: 6
+  content: 5000
+
+# Setting number
+remember: "1"
+time_out: 2
+user_items: 15
+post_items: 10
+
+# Time zone
+time_zone: "Asia/Bangkok"
